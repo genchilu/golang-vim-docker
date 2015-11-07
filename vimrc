@@ -1,7 +1,3 @@
-call pathogen#infect()
-syntax enable
-filetype plugin on
-set number
 let g:go_disable_autoinstall = 0
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
@@ -31,8 +27,4 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 nmap <F8> :TagbarToggle<CR>
-set tabstop=4
-set shiftwidth=4
-set colorcolumn=80
-map <C-n> :NERDTreeToggle<CR>
 let g:neocomplete#enable_at_startup = 1
