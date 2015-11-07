@@ -19,7 +19,9 @@ RUN mkdir -p /goprojects/src
 RUN mkdir -p /goprojects/src/github.com
 RUN mkdir -p /goprojects/src/github.com/genchilu
 
-COPY pathogen.vim /root/.vim/autoload/pathogen.vim
+# vim plugin
+RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+	curl -LSso /root/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 RUN git clone https://github.com/fatih/vim-go.git /root/.vim/bundle/vim-go
 RUN go get -u github.com/jstemmer/gotags
 RUN git clone https://github.com/majutsushi/tagbar.git /root/.vim/bundle/tagbar
