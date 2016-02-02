@@ -20,10 +20,10 @@ RUN mkdir -p /goprojects/src/github.com
 RUN mkdir -p /goprojects/src/github.com/genchilu
 
 # vim plugin for golang & oh-my-zsh
-RUN git clone https://github.com/genchilu/dotfile.git && bash dotfile/setup.sh
+RUN git clone https://github.com/genchilu/dotfile.git && cd dotfile && bash setup.sh && cd .. && rm -rf dotfile
 RUN git clone https://github.com/fatih/vim-go.git /root/.vim/bundle/vim-go
 RUN go get -u github.com/jstemmer/gotags
 RUN git clone https://github.com/majutsushi/tagbar.git /root/.vim/bundle/tagbar
-RUN git clone https://github.com/Shougo/neocomplete.vim.git /root/.vim/bundle/neocomplete.vim
+RUN go get github.com/nsf/gocode
 COPY vimrc /root/vimrc
-RUN cat /root/vimrc >> /root/.vimrc && rm -rf /root/vimrc
+RUN cat /root/vimrc >> /root/.vimrc

@@ -27,4 +27,3 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 nmap <F8> :TagbarToggle<CR>
-let g:neocomplete#enable_at_startup = 1
