@@ -27,3 +27,5 @@ RUN git clone https://github.com/majutsushi/tagbar.git /root/.vim/bundle/tagbar
 RUN go get github.com/nsf/gocode
 COPY vimrc /root/vimrc
 RUN cat /root/vimrc >> /root/.vimrc
+
+ENV LANG C.UTF-8 
