@@ -9,7 +9,7 @@ ENV GOPATH /goprojects
 ENV PATH $PATH:/goprojects/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 # go 1.5
-RUN wget -qO- https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz | tar -C /usr/local -xzf -
+RUN wget -qO- https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz | tar -C /usr/local -xzf -
 
 # GOPATH
 RUN mkdir -p /goprojects
