@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 RUN apt-get update
 RUN apt-get install -y build-essential git wget curl ctags vim
@@ -8,7 +8,7 @@ RUN apt-get install -y build-essential git wget curl ctags vim
 ENV GOPATH /goprojects
 ENV PATH $PATH:/goprojects/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-# go 1.5
+# go 1.6
 RUN wget -qO- https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz | tar -C /usr/local -xzf -
 
 # GOPATH

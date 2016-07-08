@@ -1,2 +1,2 @@
 # golang-vim-docker
-goland dev with ide vim
+golang dev with vim
